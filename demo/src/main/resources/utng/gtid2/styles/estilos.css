@@ -1,0 +1,49 @@
+/* El campo de contraseña estilo Uiverse */
+.password-field {
+    -fx-pref-height: 45px;
+    -fx-background-color: #f8fafc;
+    -fx-text-fill: #0d0c22;
+    -fx-border-color: transparent;
+    -fx-border-width: 2px;
+    -fx-background-radius: 10px;
+    -fx-border-radius: 10px;
+    -fx-padding: 0 10 0 15px; /* Controla el texto adentro */
+}
+
+/* El color del texto de sugerencia (Prompt Text) */
+.password-field .text {
+    -fx-prompt-text-fill: #94a3b8;
+}
+
+/* Efectos al pasar el mouse (hover) o dar clic (focus) */
+.password-field:hover, .password-field:focused {
+    -fx-border-color: rgb(129, 140, 248);
+    -fx-background-color: #ffffff;
+    -fx-effect: dropshadow(three-pass-box, rgba(129, 140, 248, 0.3), 5, 0, 0, 0);
+}
+
+/* --- BOTÓN FLOTANTE ESTILO UIVERSE --- */
+.boton-flotante {
+    -fx-font-size: 18px;
+    -fx-cursor: hand;
+    -fx-text-fill: #ffffff;
+    -fx-background-radius: 6px;
+    /* Degradado radial desde la esquina superior derecha */
+    -fx-background-color: radial-gradient(radius 100%, #89E5FF 0%, #5468FF 100%);
+    /* Sombra base (simula el box-shadow de la web) */
+    -fx-effect: dropshadow(three-pass-box, rgba(45, 35, 66, 0.4), 10, 0, 0, 4);
+    -fx-padding: 0 2em;
+    -fx-pref-height: 46px;
+}
+
+/* Efecto Hover (al pasar el mouse) -> Simula el movimiento hacia arriba cambiando los paddings */
+.boton-flotante:hover {
+    -fx-effect: dropshadow(three-pass-box, rgba(45, 35, 66, 0.4), 15, 0, 0, 6);
+    -fx-padding: -2px 2em 2px 2em;
+}
+
+/* Efecto Active/Armed (al darle clic) -> Simula que se hunde y mete una sombra interior */
+.boton-flotante:armed {
+    -fx-effect: innershadow(three-pass-box, #3c4fe0, 10, 0, 0, 2);
+    -fx-padding: 2px 2em -2px 2em;
+}

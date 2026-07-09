@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="560.0" prefWidth="680.0" style="-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #b721ff 0%, #21d4fd 100%);" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="utng.gtid2.jome.RegistroDesechoController">
+   <children>
+      <Pane layoutX="60.0" layoutY="40.0" prefHeight="480.0" prefWidth="560.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 16; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.15), 12, 0, 0, 4);">
+         <children>
+
+            <!-- ===== Encabezado ===== -->
+            <ImageView fitHeight="34.0" layoutX="40.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+               <image><Image url="@../images/Logo.png" /></image>
+            </ImageView>
+            <Label layoutX="82.0" layoutY="22.0" text="CGTI">
+               <font><Font name="System Bold" size="22.0" /></font>
+            </Label>
+            <Label layoutX="82.0" layoutY="50.0" text="Registro de Desecho" textFill="#00afff">
+               <font><Font name="System Bold" size="13.0" /></font>
+            </Label>
+
+            <Separator layoutX="40.0" layoutY="72.0" prefWidth="480.0" />
+
+            <!-- ===== Fila 1: Insumo (FK) + Cantidad + Peso ===== -->
+            <Label layoutX="40.0" layoutY="92.0" text="Insumo">
+               <font><Font name="System Bold" size="10.0" /></font>
+            </Label>
+            <ComboBox fx:id="cmbInsumo" layoutX="40.0" layoutY="108.0" prefHeight="30.0" prefWidth="240.0" promptText="Selecciona un insumo" style="-fx-background-radius: 6; -fx-border-color: #d9dee3; -fx-border-radius: 6;" />
+
+            <Label layoutX="300.0" layoutY="92.0" text="Cantidad">
+               <font><Font name="System Bold" size="10.0" /></font>
+            </Label>
+            <TextField fx:id="txtCantidad" layoutX="300.0" layoutY="108.0" prefHeight="30.0" prefWidth="100.0" promptText="Ej. 3" style="-fx-background-radius: 6; -fx-border-color: #d9dee3; -fx-border-radius: 6;" />
+
+            <Label layoutX="420.0" layoutY="92.0" text="Peso (kg)">
+               <font><Font name="System Bold" size="10.0" /></font>
+            </Label>
+            <TextField fx:id="txtPeso" layoutX="420.0" layoutY="108.0" prefHeight="30.0" prefWidth="100.0" promptText="Ej. 1.5" style="-fx-background-radius: 6; -fx-border-color: #d9dee3; -fx-border-radius: 6;" />
+
+            <!-- ===== Fila 2: Motivo + Fecha ===== -->
+            <Label layoutX="40.0" layoutY="156.0" text="Motivo de Desecho">
+               <font><Font name="System Bold" size="10.0" /></font>
+            </Label>
+            <TextField fx:id="txtMotivo" layoutX="40.0" layoutY="172.0" prefHeight="30.0" prefWidth="290.0" promptText="Ej. Dañado, obsoleto..." style="-fx-background-radius: 6; -fx-border-color: #d9dee3; -fx-border-radius: 6;" />
+
+            <Label layoutX="350.0" layoutY="156.0" text="Fecha">
+               <font><Font name="System Bold" size="10.0" /></font>
+            </Label>
+            <TextField fx:id="txtFecha" layoutX="350.0" layoutY="172.0" prefHeight="30.0" prefWidth="170.0" promptText="dd/mm/aaaa" style="-fx-background-radius: 6; -fx-border-color: #d9dee3; -fx-border-radius: 6;" />
+
+            <!-- ===== Fila 3: Responsable (FK) ===== -->
+            <Label layoutX="40.0" layoutY="220.0" text="Responsable">
+               <font><Font name="System Bold" size="10.0" /></font>
+            </Label>
+            <ComboBox fx:id="cmbResponsable" layoutX="40.0" layoutY="236.0" prefHeight="30.0" prefWidth="240.0" promptText="Selecciona un usuario" style="-fx-background-radius: 6; -fx-border-color: #d9dee3; -fx-border-radius: 6;" />
+
+            <!-- ===== Fila 4: Descripción (opcional) ===== -->
+            <Label layoutX="40.0" layoutY="280.0" text="Descripción (opcional)">
+               <font><Font name="System Bold" size="10.0" /></font>
+            </Label>
+            <TextArea fx:id="txtDescripcion" layoutX="40.0" layoutY="296.0" prefHeight="60.0" prefWidth="480.0" promptText="Detalles adicionales..." style="-fx-background-radius: 6; -fx-border-color: #d9dee3; -fx-border-radius: 6;" wrapText="true" />
+
+            <Separator layoutX="40.0" layoutY="368.0" prefWidth="480.0" />
+
+            <!-- ===== Mensaje de validación ===== -->
+            <Label fx:id="lblError" layoutX="40.0" layoutY="380.0" prefWidth="480.0" text="" textFill="#e53935" wrapText="true">
+               <font><Font size="10.0" /></font>
+            </Label>
+
+            <!-- ===== Botones ===== -->
+            <Button fx:id="btnGuardar" layoutX="40.0" layoutY="416.0" mnemonicParsing="false" onAction="#mostrarInformacion" prefHeight="32.0" prefWidth="150.0" style="-fx-background-color: linear-gradient(to bottom right, #4ba4ff, #26d6ff); -fx-background-radius: 6;" text="Guardar" textFill="WHITE">
+               <font><Font name="System Bold" size="12.0" /></font>
+            </Button>
+            <Button fx:id="btnCancelar" layoutX="200.0" layoutY="416.0" mnemonicParsing="false" onAction="#accionCancelar" prefHeight="32.0" prefWidth="150.0" style="-fx-background-color: #e53935; -fx-background-radius: 6;" text="Cancelar" textFill="WHITE">
+               <font><Font name="System Bold" size="12.0" /></font>
+            </Button>
+            <Button fx:id="btnVolver" layoutX="360.0" layoutY="416.0" mnemonicParsing="false" onAction="#accionVolver" prefHeight="32.0" prefWidth="160.0" style="-fx-background-color: linear-gradient(to bottom right, #4ba4ff, #26d6ff); -fx-background-radius: 6;" text="Volver al menú" textFill="WHITE">
+               <font><Font name="System Bold" size="12.0" /></font>
+            </Button>
+
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
