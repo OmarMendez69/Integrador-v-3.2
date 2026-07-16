@@ -19,12 +19,13 @@ import java.util.ResourceBundle;
 
 public class RegistroDesechoController implements Initializable {
 
+    @FXML private TextField txtFolio;
     @FXML private ComboBox<String> cmbInsumo;
     @FXML private TextField txtCantidad;
     @FXML private TextField txtPeso;
     @FXML private TextField txtMotivo;
     @FXML private TextField txtFecha;
-    @FXML private ComboBox<String> cmbResponsable;
+    @FXML private TextField txtResponsable; // deshabilitado: se llenará con el usuario logueado
     @FXML private TextArea txtDescripcion;
     @FXML private Label lblError;
     @FXML private Button btnGuardar;
@@ -44,13 +45,6 @@ public class RegistroDesechoController implements Initializable {
                 "INS-006 - Teclado USB"
         );
 
-        // Responsable ahora es un dropdown (FK a Usuario), no texto libre.
-        cmbResponsable.getItems().addAll(
-                "Angel Nolasco",
-                "Jonathan Aguilar",
-                "Jesus Omar"
-        );
-
         lblError.setText("");
     }
 
@@ -65,9 +59,11 @@ public class RegistroDesechoController implements Initializable {
         txtPeso.setText(peso);
         txtMotivo.setText(motivo);
         txtFecha.setText(fecha);
-        cmbResponsable.setValue(responsable);
+        txtResponsable.setText(responsable);
         txtDescripcion.setText(descripcion);
         btnGuardar.setText("Actualizar");
+        // txtFolio no se toca aquí: en un caso real, al editar mostraría el folio
+        // ya existente del registro en lugar del texto genérico.
     }
 
     @FXML
@@ -76,9 +72,8 @@ public class RegistroDesechoController implements Initializable {
                 || txtCantidad.getText().isEmpty()
                 || txtPeso.getText().isEmpty()
                 || txtMotivo.getText().isEmpty()
-                || txtFecha.getText().isEmpty()
-                || cmbResponsable.getValue() == null) {
-            lblError.setText("Completa Insumo, Cantidad, Peso, Motivo, Fecha y Responsable antes de guardar.");
+                || txtFecha.getText().isEmpty()) {
+            lblError.setText("Completa Insumo, Cantidad, Peso, Motivo y Fecha antes de guardar.");
             return;
         }
 
@@ -100,9 +95,9 @@ public class RegistroDesechoController implements Initializable {
         txtPeso.clear();
         txtMotivo.clear();
         txtFecha.clear();
-        cmbResponsable.getSelectionModel().clearSelection();
         txtDescripcion.clear();
         lblError.setText("");
+        // txtFolio y txtResponsable no se limpian: los llenará el sistema
     }
 
     @FXML

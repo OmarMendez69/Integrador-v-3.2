@@ -45,50 +45,54 @@
 
                 <!-- Encabezado de la tabla (sin TableView, para evitar el placeholder "Tabla sin contenido") -->
                 <HBox alignment="CENTER_LEFT" spacing="0.0" style="-fx-background-color: #EFEFEF; -fx-background-radius: 6 6 0 0; -fx-padding: 10 10 10 10;">
-                    <Label prefWidth="150.0" style="-fx-font-size: 12px; -fx-font-weight: BOLD;" text="Insumo" />
+                    <Label prefWidth="90.0" style="-fx-font-size: 12px; -fx-font-weight: BOLD;" text="Folio" />
+                    <Label prefWidth="140.0" style="-fx-font-size: 12px; -fx-font-weight: BOLD;" text="Insumo" />
                     <Label alignment="CENTER" prefWidth="80.0" style="-fx-font-size: 12px; -fx-font-weight: BOLD;" text="Cantidad" />
                     <Label alignment="CENTER" prefWidth="80.0" style="-fx-font-size: 12px; -fx-font-weight: BOLD;" text="Peso (kg)" />
-                    <Label prefWidth="150.0" style="-fx-font-size: 12px; -fx-font-weight: BOLD;" text="Motivo de Desecho" />
+                    <Label prefWidth="140.0" style="-fx-font-size: 12px; -fx-font-weight: BOLD;" text="Motivo de Desecho" />
                     <Label alignment="CENTER" prefWidth="100.0" style="-fx-font-size: 12px; -fx-font-weight: BOLD;" text="Fecha" />
-                    <Label prefWidth="140.0" style="-fx-font-size: 12px; -fx-font-weight: BOLD;" text="Responsable" />
-                    <Label prefWidth="150.0" style="-fx-font-size: 12px; -fx-font-weight: BOLD;" text="Descripción" />
+                    <Label prefWidth="130.0" style="-fx-font-size: 12px; -fx-font-weight: BOLD;" text="Responsable" />
+                    <Label prefWidth="140.0" style="-fx-font-size: 12px; -fx-font-weight: BOLD;" text="Descripción" />
                     <Label alignment="CENTER" prefWidth="90.0" style="-fx-font-size: 12px; -fx-font-weight: BOLD;" text="Acciones" />
                 </HBox>
                 <Separator />
 
                 <!-- Filas de ejemplo, alineadas con las columnas de arriba -->
                 <HBox alignment="CENTER_LEFT" spacing="0.0" style="-fx-padding: 10 10 10 10;">
-                    <Label prefWidth="150.0" style="-fx-font-size: 12px;" text="Monitor Samsung" />
+                    <Label prefWidth="90.0" style="-fx-font-size: 12px; -fx-text-fill: #00afff; -fx-font-weight: BOLD;" text="DS-0001" />
+                    <Label prefWidth="140.0" style="-fx-font-size: 12px;" text="Monitor Samsung" />
                     <Label alignment="CENTER" prefWidth="80.0" style="-fx-font-size: 12px;" text="1 ud" />
                     <Label alignment="CENTER" prefWidth="80.0" style="-fx-font-size: 12px;" text="4.2 kg" />
-                    <Label prefWidth="150.0" style="-fx-font-size: 12px;" text="Pantalla rota" />
+                    <Label prefWidth="140.0" style="-fx-font-size: 12px;" text="Pantalla rota" />
                     <Label alignment="CENTER" prefWidth="100.0" style="-fx-font-size: 12px;" text="01/06/2026" />
-                    <Label prefWidth="140.0" style="-fx-font-size: 12px;" text="Angel Nolasco" />
-                    <Label prefWidth="150.0" style="-fx-font-size: 12px;" text="Sin observaciones" />
+                    <Label prefWidth="130.0" style="-fx-font-size: 12px;" text="Angel Nolasco" />
+                    <Label prefWidth="140.0" style="-fx-font-size: 12px;" text="Sin observaciones" />
                     <Button alignment="CENTER" onAction="#accionEditarDesecho1" prefWidth="90.0" style="-fx-background-color: #4ba4ff; -fx-background-radius: 4; -fx-text-fill: white; -fx-font-size: 11px;" text="Editar" />
                 </HBox>
                 <Separator />
 
                 <HBox alignment="CENTER_LEFT" spacing="0.0" style="-fx-padding: 10 10 10 10;">
-                    <Label prefWidth="150.0" style="-fx-font-size: 12px;" text="Teclado Logitech" />
+                    <Label prefWidth="90.0" style="-fx-font-size: 12px; -fx-text-fill: #00afff; -fx-font-weight: BOLD;" text="DS-0002" />
+                    <Label prefWidth="140.0" style="-fx-font-size: 12px;" text="Teclado Logitech" />
                     <Label alignment="CENTER" prefWidth="80.0" style="-fx-font-size: 12px;" text="2 uds" />
                     <Label alignment="CENTER" prefWidth="80.0" style="-fx-font-size: 12px;" text="0.8 kg" />
-                    <Label prefWidth="150.0" style="-fx-font-size: 12px;" text="No enciende" />
+                    <Label prefWidth="140.0" style="-fx-font-size: 12px;" text="No enciende" />
                     <Label alignment="CENTER" prefWidth="100.0" style="-fx-font-size: 12px;" text="05/06/2026" />
-                    <Label prefWidth="140.0" style="-fx-font-size: 12px;" text="Jonathan Aguilar" />
-                    <Label prefWidth="150.0" style="-fx-font-size: 12px;" text="Sin observaciones" />
+                    <Label prefWidth="130.0" style="-fx-font-size: 12px;" text="Jonathan Aguilar" />
+                    <Label prefWidth="140.0" style="-fx-font-size: 12px;" text="Sin observaciones" />
                     <Button alignment="CENTER" onAction="#accionEditarDesecho2" prefWidth="90.0" style="-fx-background-color: #4ba4ff; -fx-background-radius: 4; -fx-text-fill: white; -fx-font-size: 11px;" text="Editar" />
                 </HBox>
                 <Separator />
 
                 <HBox alignment="CENTER_LEFT" spacing="0.0" style="-fx-padding: 10 10 10 10;">
-                    <Label prefWidth="150.0" style="-fx-font-size: 12px;" text="Mouse HP" />
+                    <Label prefWidth="90.0" style="-fx-font-size: 12px; -fx-text-fill: #00afff; -fx-font-weight: BOLD;" text="DS-0003" />
+                    <Label prefWidth="140.0" style="-fx-font-size: 12px;" text="Mouse HP" />
                     <Label alignment="CENTER" prefWidth="80.0" style="-fx-font-size: 12px;" text="5 uds" />
                     <Label alignment="CENTER" prefWidth="80.0" style="-fx-font-size: 12px;" text="0.5 kg" />
-                    <Label prefWidth="150.0" style="-fx-font-size: 12px;" text="Desgaste" />
+                    <Label prefWidth="140.0" style="-fx-font-size: 12px;" text="Desgaste" />
                     <Label alignment="CENTER" prefWidth="100.0" style="-fx-font-size: 12px;" text="08/06/2026" />
-                    <Label prefWidth="140.0" style="-fx-font-size: 12px;" text="Jesus Omar" />
-                    <Label prefWidth="150.0" style="-fx-font-size: 12px;" text="Sin observaciones" />
+                    <Label prefWidth="130.0" style="-fx-font-size: 12px;" text="Jesus Omar" />
+                    <Label prefWidth="140.0" style="-fx-font-size: 12px;" text="Sin observaciones" />
                     <Button alignment="CENTER" onAction="#accionEditarDesecho3" prefWidth="90.0" style="-fx-background-color: #4ba4ff; -fx-background-radius: 4; -fx-text-fill: white; -fx-font-size: 11px;" text="Editar" />
                 </HBox>
 

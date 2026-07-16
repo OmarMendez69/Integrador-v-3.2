@@ -55,13 +55,12 @@ public class AgregarProductoController {
 
     @FXML
     private void accionCancelar() {
-        txtCodigo.clear();
         txtNombre.clear();
         txtCategoria.clear();
         txtUbicacion.clear();
         txtCantidadTotal.clear();
         txtCostoUnitario.clear();
-        // txtDisponible y txtEstado no se tocan: los llena el sistema
+        // txtCodigo, txtDisponible y txtEstado no se tocan: los llena el sistema
     }
 
     @FXML

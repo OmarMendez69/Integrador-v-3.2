@@ -24,10 +24,10 @@
             </ImageView>
 
             <!-- Columna izquierda -->
-            <Label layoutX="40.0" layoutY="87.0" text="Código">
+            <Label layoutX="40.0" layoutY="87.0" text="Código (automático)">
                <font><Font name="System Bold" size="10.0" /></font>
             </Label>
-            <TextField fx:id="txtCodigo" layoutX="41.0" layoutY="103.0" prefHeight="23.0" prefWidth="250.0" />
+            <TextField fx:id="txtCodigo" disable="true" layoutX="41.0" layoutY="103.0" prefHeight="23.0" prefWidth="250.0" promptText="Se genera al guardar" style="-fx-opacity: 0.75;" />
 
             <Label layoutX="40.0" layoutY="133.0" text="Nombre">
                <font><Font name="System Bold" size="10.0" /></font>

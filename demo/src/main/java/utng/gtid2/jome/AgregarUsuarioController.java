@@ -5,6 +5,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
@@ -14,10 +15,16 @@ import java.io.IOException;
 public class AgregarUsuarioController {
 
     @FXML
+    private Label lblTitulo;
+
+    @FXML
     private TextField txtNombre;
 
     @FXML
     private TextField txtUsername;
+
+    @FXML
+    private Label lblPassword;
 
     @FXML
     private PasswordField txtPassword;
@@ -36,6 +43,16 @@ public class AgregarUsuarioController {
         txtUsername.setText(username);
         txtRol.setText(rol);
         btnGuardar.setText("Actualizar");
+        lblTitulo.setText("Editar Usuario");
+
+        // En modo edición no se permite tocar username ni password:
+        // ambos son datos de acceso originales del primer login.
+        txtUsername.setDisable(true);
+
+        lblPassword.setVisible(false);
+        lblPassword.setManaged(false);
+        txtPassword.setVisible(false);
+        txtPassword.setManaged(false);
     }
 
     @FXML

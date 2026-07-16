@@ -36,7 +36,10 @@
                   <VBox spacing="0.0" style="-fx-padding: 20 30 20 30; -fx-background-color: #FFFFFF;">
 
                      <!-- RESUMEN GENERAL -->
-                     <Label text="Resumen General" style="-fx-font-size: 15px; -fx-font-weight: bold; -fx-text-fill: #1F2937;" />
+                     <HBox alignment="CENTER_LEFT">
+                        <Label text="Resumen General" style="-fx-font-size: 15px; -fx-font-weight: bold; -fx-text-fill: #1F2937;" HBox.hgrow="ALWAYS" />
+                        <Button fx:id="btnDescargarResumen" mnemonicParsing="false" onAction="#descargarResumen" style="-fx-background-color: #E0F2FE; -fx-text-fill: #0369A1; -fx-font-size: 10px; -fx-background-radius: 4; -fx-cursor: hand; -fx-padding: 4 10 4 10;" text="⬇ Descargar" />
+                     </HBox>
                      <Separator style="-fx-padding: 4 0 8 0;" />
                      <VBox spacing="0.0" style="-fx-background-color: #F9FAFB; -fx-border-color: #E5E7EB; -fx-border-width: 1; -fx-border-radius: 6; -fx-background-radius: 6; -fx-padding: 10 16 10 16;">
                         <HBox>
@@ -60,7 +63,10 @@
                      <Pane prefHeight="16.0" />
 
                      <!-- CATÁLOGO DE INSUMOS -->
-                     <Label text="Catálogo de Insumos" style="-fx-font-size: 15px; -fx-font-weight: bold; -fx-text-fill: #1F2937;" />
+                     <HBox alignment="CENTER_LEFT">
+                        <Label text="Catálogo de Insumos" style="-fx-font-size: 15px; -fx-font-weight: bold; -fx-text-fill: #1F2937;" HBox.hgrow="ALWAYS" />
+                        <Button fx:id="btnDescargarCatalogo" mnemonicParsing="false" onAction="#descargarCatalogo" style="-fx-background-color: #E0F2FE; -fx-text-fill: #0369A1; -fx-font-size: 10px; -fx-background-radius: 4; -fx-cursor: hand; -fx-padding: 4 10 4 10;" text="⬇ Descargar" />
+                     </HBox>
                      <Separator style="-fx-padding: 4 0 8 0;" />
                      <VBox spacing="0.0" style="-fx-border-color: #E5E7EB; -fx-border-width: 1; -fx-border-radius: 6; -fx-background-radius: 6;">
                         <HBox style="-fx-background-color: #F3F4F6; -fx-padding: 6 16 6 16; -fx-background-radius: 6 6 0 0;">
@@ -92,7 +98,10 @@
                      <Pane prefHeight="16.0" />
 
                      <!-- ASIGNACIONES -->
-                     <Label text="Asignaciones" style="-fx-font-size: 15px; -fx-font-weight: bold; -fx-text-fill: #1F2937;" />
+                     <HBox alignment="CENTER_LEFT">
+                        <Label text="Asignaciones" style="-fx-font-size: 15px; -fx-font-weight: bold; -fx-text-fill: #1F2937;" HBox.hgrow="ALWAYS" />
+                        <Button fx:id="btnDescargarAsignaciones" mnemonicParsing="false" onAction="#descargarAsignaciones" style="-fx-background-color: #E0F2FE; -fx-text-fill: #0369A1; -fx-font-size: 10px; -fx-background-radius: 4; -fx-cursor: hand; -fx-padding: 4 10 4 10;" text="⬇ Descargar" />
+                     </HBox>
                      <Separator style="-fx-padding: 4 0 8 0;" />
                      <VBox spacing="0.0" style="-fx-border-color: #E5E7EB; -fx-border-width: 1; -fx-border-radius: 6; -fx-background-radius: 6;">
                         <HBox style="-fx-background-color: #F3F4F6; -fx-padding: 6 16 6 16; -fx-background-radius: 6 6 0 0;">
@@ -124,7 +133,10 @@
                      <Pane prefHeight="16.0" />
 
                      <!-- REGISTRO DE DESECHO -->
-                     <Label text="Registro de Desecho" style="-fx-font-size: 15px; -fx-font-weight: bold; -fx-text-fill: #1F2937;" />
+                     <HBox alignment="CENTER_LEFT">
+                        <Label text="Registro de Desecho" style="-fx-font-size: 15px; -fx-font-weight: bold; -fx-text-fill: #1F2937;" HBox.hgrow="ALWAYS" />
+                        <Button fx:id="btnDescargarDesecho" mnemonicParsing="false" onAction="#descargarDesecho" style="-fx-background-color: #E0F2FE; -fx-text-fill: #0369A1; -fx-font-size: 10px; -fx-background-radius: 4; -fx-cursor: hand; -fx-padding: 4 10 4 10;" text="⬇ Descargar" />
+                     </HBox>
                      <Separator style="-fx-padding: 4 0 8 0;" />
                      <VBox spacing="0.0" style="-fx-border-color: #E5E7EB; -fx-border-width: 1; -fx-border-radius: 6; -fx-background-radius: 6;">
                         <HBox style="-fx-background-color: #F3F4F6; -fx-padding: 6 16 6 16; -fx-background-radius: 6 6 0 0;">
@@ -156,7 +168,10 @@
                      <Pane prefHeight="16.0" />
 
                      <!-- USUARIOS -->
-                     <Label text="Usuarios Registrados" style="-fx-font-size: 15px; -fx-font-weight: bold; -fx-text-fill: #1F2937;" />
+                     <HBox alignment="CENTER_LEFT">
+                        <Label text="Usuarios Registrados" style="-fx-font-size: 15px; -fx-font-weight: bold; -fx-text-fill: #1F2937;" HBox.hgrow="ALWAYS" />
+                        <Button fx:id="btnDescargarUsuarios" mnemonicParsing="false" onAction="#descargarUsuarios" style="-fx-background-color: #E0F2FE; -fx-text-fill: #0369A1; -fx-font-size: 10px; -fx-background-radius: 4; -fx-cursor: hand; -fx-padding: 4 10 4 10;" text="⬇ Descargar" />
+                     </HBox>
                      <Separator style="-fx-padding: 4 0 8 0;" />
                      <VBox spacing="0.0" style="-fx-border-color: #E5E7EB; -fx-border-width: 1; -fx-border-radius: 6; -fx-background-radius: 6;">
                         <HBox style="-fx-background-color: #F3F4F6; -fx-padding: 6 16 6 16; -fx-background-radius: 6 6 0 0;">
@@ -187,7 +202,7 @@
 
             <!-- FOOTER BOTONES -->
             <HBox layoutX="0.0" layoutY="500.0" prefWidth="700.0" prefHeight="60.0" alignment="CENTER_LEFT" spacing="12.0" style="-fx-padding: 12 24 12 24; -fx-border-color: #E5E7EB; -fx-border-width: 1 0 0 0;">
-               <Button fx:id="btnDescargar" mnemonicParsing="false" onAction="#descargarReporte" prefHeight="34.0" prefWidth="180.0" style="-fx-background-color: #2E7D32; -fx-background-radius: 4; -fx-text-fill: #FFFFFF; -fx-font-size: 13px; -fx-font-weight: bold; -fx-cursor: hand;" text="⬇ Descargar PDF" />
+               <Button fx:id="btnDescargar" mnemonicParsing="false" onAction="#descargarReporte" prefHeight="34.0" prefWidth="180.0" style="-fx-background-color: #2E7D32; -fx-background-radius: 4; -fx-text-fill: #FFFFFF; -fx-font-size: 13px; -fx-font-weight: bold; -fx-cursor: hand;" text="⬇ Descargar Todo (PDF)" />
                <Pane HBox.hgrow="ALWAYS" />
                <Button fx:id="btnVolver" mnemonicParsing="false" onAction="#accionVolver" prefHeight="34.0" style="-fx-background-color: linear-gradient(to bottom right, #4ba4ff, #26d6ff); -fx-background-radius: 4; -fx-text-fill: #FFFFFF; -fx-font-size: 13px; -fx-cursor: hand;" text="Volver al menú" />
             </HBox>

@@ -71,7 +71,6 @@ public class PrestamoController implements Initializable {
 
     @FXML
     private void accionCancelar() {
-        txtFolio.clear();
         cmbInsumo.getSelectionModel().clearSelection();
         cmbResponsable.getSelectionModel().clearSelection();
         txtFechaPrestamo.clear();

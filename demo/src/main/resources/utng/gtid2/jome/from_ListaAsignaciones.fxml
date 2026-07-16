@@ -14,7 +14,7 @@
 <?import javafx.scene.layout.Region?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane prefHeight="620.0" prefWidth="900.0" style="-fx-background-color: #F4F6F8;" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="utng.gtid2.jome.ListaAsignacionesController">
+<AnchorPane prefHeight="620.0" prefWidth="960.0" style="-fx-background-color: #F4F6F8;" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="utng.gtid2.jome.ListaAsignacionesController">
 
     <VBox spacing="0.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
 
@@ -43,12 +43,14 @@
         <VBox style="-fx-padding: 20 24 0 24; -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #b721ff 0%, #21d4fd 100%);" VBox.vgrow="ALWAYS">
             <TableView fx:id="tablaAsignaciones" style="-fx-background-color: #FFFFFF; -fx-border-color: #DDE3EA; -fx-border-radius: 6; -fx-background-radius: 6;" VBox.vgrow="ALWAYS">
                 <columns>
-                    <TableColumn fx:id="colFolio" prefWidth="90.0" style="-fx-alignment: CENTER;" text="Folio" />
-                    <TableColumn fx:id="colInsumo" prefWidth="160.0" text="Insumo Prestado" />
-                    <TableColumn fx:id="colTecnico" prefWidth="160.0" text="Responsable / Técnico" />
-                    <TableColumn fx:id="colFechaPrestamo" prefWidth="110.0" style="-fx-alignment: CENTER;" text="Fecha Préstamo" />
-                    <TableColumn fx:id="colFechaDevolucion" prefWidth="110.0" style="-fx-alignment: CENTER;" text="Fecha Devolución" />
-                    <TableColumn fx:id="colObservaciones" prefWidth="150.0" text="Observaciones" />
+                    <TableColumn fx:id="colFolio" prefWidth="70.0" style="-fx-alignment: CENTER;" text="Folio" />
+                    <TableColumn fx:id="colInsumo" prefWidth="140.0" text="Insumo Prestado" />
+                    <TableColumn fx:id="colTecnico" prefWidth="140.0" text="Responsable / Técnico" />
+                    <TableColumn fx:id="colFechaPrestamo" prefWidth="100.0" style="-fx-alignment: CENTER;" text="Fecha Préstamo" />
+                    <TableColumn fx:id="colFechaDevolucion" prefWidth="100.0" style="-fx-alignment: CENTER;" text="Fecha Devolución" />
+                    <TableColumn fx:id="colEstado" prefWidth="80.0" style="-fx-alignment: CENTER;" text="Estado" />
+                    <TableColumn fx:id="colObservaciones" prefWidth="130.0" text="Observaciones" />
+                    <TableColumn fx:id="colAccion" prefWidth="140.0" style="-fx-alignment: CENTER;" text="Acción" />
                 </columns>
                 <placeholder>
                     <Label style="-fx-text-fill: #AAAAAA; -fx-font-size: 13px;" text="No hay préstamos registrados." />
@@ -58,9 +60,13 @@
 
         <!-- FOOTER -->
         <HBox alignment="CENTER_LEFT" prefHeight="44.0" spacing="24.0" style="-fx-background-color: #FFFFFF; -fx-padding: 0 24 0 24; -fx-border-color: #DDE3EA; -fx-border-width: 1 0 0 0;">
-            <Label fx:id="lblTotalAsignaciones" style="-fx-text-fill: #555555; -fx-font-size: 12px;" text="Total: 3 préstamos" />
+            <Label fx:id="lblTotalAsignaciones" style="-fx-text-fill: #555555; -fx-font-size: 12px;" text="Total: 5 préstamos" />
             <Separator orientation="VERTICAL" />
-            <Label style="-fx-text-fill: #2E7D32; -fx-font-size: 12px; -fx-font-weight: BOLD;" text="Activos: 3" />
+            <Label fx:id="lblActivos" style="-fx-text-fill: #2E7D32; -fx-font-size: 12px; -fx-font-weight: BOLD;" text="Activos: 3" />
+            <Separator orientation="VERTICAL" />
+            <Label fx:id="lblVencidos" style="-fx-text-fill: #EF4444; -fx-font-size: 12px; -fx-font-weight: BOLD;" text="Vencidos: 1" />
+            <Separator orientation="VERTICAL" />
+            <Label fx:id="lblDevueltos" style="-fx-text-fill: #F59E0B; -fx-font-size: 12px; -fx-font-weight: BOLD;" text="Devueltos: 2" />
             <Region HBox.hgrow="ALWAYS" />
             <Button fx:id="btnRegistrarPrestamo" onAction="#accionAbrirPrestamo" prefHeight="30.0" style="-fx-background-color: linear-gradient(to bottom right, #b721ff, #21d4fd); -fx-background-radius: 4; -fx-text-fill: #FFFFFF; -fx-font-size: 12px; -fx-cursor: hand;" text="Registrar Préstamo" />
             <Button fx:id="btnVolver" onAction="#accionVolver" prefHeight="30.0" style="-fx-background-color: linear-gradient(to bottom right, #4ba4ff, #26d6ff); -fx-background-radius: 4; -fx-text-fill: #FFFFFF; -fx-font-size: 12px; -fx-cursor: hand;" text="Volver al menú" />
